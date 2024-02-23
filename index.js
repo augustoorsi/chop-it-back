@@ -10,7 +10,7 @@ const PORT = process.env.PORTBACK || 3001
 
 server.use(cors())
 server.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://chop-it.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
