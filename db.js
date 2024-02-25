@@ -12,8 +12,20 @@ const URLModel = require("./models/URL")
 // const PASSWORD = process.env.PASSWORD
 
 // const sequelize = new Sequelize(`postgres://${USER}:${PASSWORD}@localhost/${DATABASE}`) 
-const sequelize = new Sequelize("postgres://chopit_vrw3_user:f8etXfjaIe426nk0GAsHNMIuQUFvwLjS@dpg-cndqmtmd3nmc738mc0tg-a.oregon-postgres.render.com/chopit_vrw3")
-
+const sequelize = new Sequelize({
+    dialect: 'postgres',
+    host: 'dpg-cndqmtmd3nmc738mc0tg-a.oregon-postgres.render.com', // Cambia esto por la dirección de tu base de datos en Render
+    username: 'chopit_vrw3_user',
+    password: 'f8etXfjaIe426nk0GAsHNMIuQUFvwLjS',
+    database: 'chopit_vrw3',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Solo si estás usando una base de datos con certificado autofirmado
+      },
+    },
+  });
+  
 sequelize.authenticate()
     .then(() => {
         console.log('Connection to the database has been established successfully.')
