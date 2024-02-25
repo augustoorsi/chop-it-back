@@ -11,7 +11,7 @@ const DATABASE = process.env.DATABASE
 const USER = process.env.USER
 const PASSWORD = process.env.PASSWORD
 
-const sequelize = new Sequelize(`postgres://${USER}:${PASSWORD}@$localhost/${DATABASE}`) 
+const sequelize = new Sequelize(`postgres://${USER}:${PASSWORD}@localhost/${DATABASE}`) 
 
 
 sequelize.authenticate()
