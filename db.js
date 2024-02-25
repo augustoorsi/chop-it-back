@@ -7,7 +7,7 @@ console.log(process.env.USER);
 console.log(process.env.PASSWORD);
 console.log(process.env.DATABASE-IP);
 
-const DATABASEIP = process.env.DATABASE-IP
+const DATABASEIP = process.env.DATABASEIP
 const DATABASE = process.env.DATABASE
 const USER = process.env.USER
 const PASSWORD = process.env.PASSWORD
