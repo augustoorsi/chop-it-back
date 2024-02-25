@@ -5,14 +5,13 @@ const URLModel = require("./models/URL")
 console.log(process.env.DATABASE);
 console.log(process.env.USER);
 console.log(process.env.PASSWORD);
-console.log(process.env.DATABASEIP);
 
-const DATABASEIP = process.env.DATABASEIP
+
 const DATABASE = process.env.DATABASE
 const USER = process.env.USER
 const PASSWORD = process.env.PASSWORD
 
-const sequelize = new Sequelize(`postgres://${USER}:${PASSWORD}@${DATABASEIP}/${DATABASE}`) 
+const sequelize = new Sequelize(`postgres://${USER}:${PASSWORD}@$localhost/${DATABASE}`) 
 
 
 sequelize.authenticate()
