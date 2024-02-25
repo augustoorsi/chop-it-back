@@ -5,7 +5,7 @@ const URLModel = require("./models/URL")
 console.log(process.env.DATABASE);
 console.log(process.env.USER);
 console.log(process.env.PASSWORD);
-console.log(process.env.DATABASE-IP);
+console.log(process.env.DATABASEIP);
 
 const DATABASEIP = process.env.DATABASEIP
 const DATABASE = process.env.DATABASE
