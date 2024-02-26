@@ -6,7 +6,7 @@ const getUser = async (req,res)=>{
     try {
         const userFound = await findUser(email,password)
         console.log(userFound)
-        res.send(200).json(userFound)
+        res.status(200).json(userFound)
     } catch (error) {
         res.status(400).json({ error: error.message })
     }
