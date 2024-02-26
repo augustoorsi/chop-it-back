@@ -1,4 +1,5 @@
 const {user} = require("../../../db")
+const bcrypt = require('bcrypt');
 
 const findUser = async (email, password) => {
     const userFound = await user.findOne({ where: { email } });
