@@ -4,7 +4,7 @@ const { userRouter } = require("./userRoutes/userRoutes")
 
 const router = Router()
 
-router.use("/", urlRouter)
-router.use("/", userRouter)
+router.use("/url", urlRouter)
+router.use("/user", userRouter)
 
 module.exports = router
