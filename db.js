@@ -41,7 +41,7 @@ USERModel(sequelize)
 const {url} = sequelize.models
 const {user} = sequelize.models
 
-user.hasMany(url,{foreignKey: "urlId"})
+user.hasMany(url,{foreignKey: "userID"})
 
 
-module.exports = { sequelize,url, user }
+module.exports = { sequelize,url,user }
