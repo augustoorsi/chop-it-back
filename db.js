@@ -1,6 +1,7 @@
 require('dotenv').config()
 const {Sequelize} = require("sequelize")
 const URLModel = require("./models/URL")
+const USERModel = require("./models/USER")
 
 // console.log(process.env.DATABASE);
 // console.log(process.env.USER);
@@ -35,9 +36,12 @@ sequelize.authenticate()
     })
 
 URLModel(sequelize)
+USERModel(sequelize)
 
 const {url} = sequelize.models
+const {user} = sequelize.models
+
+user.hasMany(url,{foreignKey: "urlId"})
 
 
-
-module.exports = { sequelize,url }
+module.exports = { sequelize,url, user }
